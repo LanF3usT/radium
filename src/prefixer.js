@@ -85,5 +85,6 @@ export function getPrefixedStyle(style: Object, userAgent?: ?string): Object {
   const styleWithFallbacks = transformValues(style);
   const prefixer = getPrefixer(userAgent);
   const prefixedStyle = prefixer.prefix(styleWithFallbacks);
+  const finalStyle = transformValues(prefixedStyle); 
   return prefixedStyle;
 }
